@@ -1,6 +1,6 @@
 package ca.gc.esdc.springtestproject.services;
 
-import ca.gc.esdc.springtestproject.entities.Car;
+import ca.gc.esdc.springtestproject.dao.entities.Car;
 
 public interface CarService {
 

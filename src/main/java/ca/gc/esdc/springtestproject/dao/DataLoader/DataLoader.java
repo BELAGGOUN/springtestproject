@@ -1,18 +1,14 @@
-package ca.gc.esdc.springtestproject.DataLoader;
+package ca.gc.esdc.springtestproject.dao.DataLoader;
 
-import ca.gc.esdc.springtestproject.Repository.AddressRepository;
-import ca.gc.esdc.springtestproject.Repository.PersonRepository;
-import ca.gc.esdc.springtestproject.Repository.ProjectRepository;
-import ca.gc.esdc.springtestproject.entities.Address;
-import ca.gc.esdc.springtestproject.entities.Car;
-import ca.gc.esdc.springtestproject.entities.Person;
+import ca.gc.esdc.springtestproject.dao.entities.Car;
+import ca.gc.esdc.springtestproject.dao.entities.Address;
+import ca.gc.esdc.springtestproject.dao.entities.Person;
 import ca.gc.esdc.springtestproject.services.AddressService;
 import ca.gc.esdc.springtestproject.services.CarService;
 import ca.gc.esdc.springtestproject.services.PersonService;
 import ca.gc.esdc.springtestproject.services.ProjectService;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 @Getter @Setter

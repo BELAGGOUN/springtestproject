@@ -1,4 +1,4 @@
-package ca.gc.esdc.springtestproject.entities;
+package ca.gc.esdc.springtestproject.dao.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

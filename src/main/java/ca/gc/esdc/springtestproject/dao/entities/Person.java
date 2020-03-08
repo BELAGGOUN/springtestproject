@@ -1,7 +1,6 @@
-package ca.gc.esdc.springtestproject.entities;
+package ca.gc.esdc.springtestproject.dao.entities;
 
 
-import com.sun.javafx.geom.transform.Identity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
