@@ -1,23 +1,20 @@
 package ca.gc.esdc.springtestproject.dao.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor
+@Getter @Setter @AllArgsConstructor @NoArgsConstructor @Builder
 @Entity
 //@Table(name = "t_address")
 public class Address {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String street;
     private String city;
 
     //Adding bidirectionel Relation
-    @OneToOne(mappedBy = "address")
-     private Person person ;
+//    @OneToOne(mappedBy = "address")
+//     private Person person ;
 }

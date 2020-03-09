@@ -1,6 +1,8 @@
 package ca.gc.esdc.springtestproject.dao.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,15 +21,19 @@ import java.util.List;
 public class Person {
 
    @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
-    private int nId;
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long nId;
     private String firstName;
     private String lastName;
+    @Temporal(TemporalType.DATE)
     private Date dateBirth;
-    private Integer age;
+    private long age;
+
     @Transient
     private String nas;
     //ADDING THE RELATION ATTRIBUTE BETWEEN TABLES
+
+
     @OneToOne
     @JoinColumn(name= "Adr_FK")
     private Address address;
@@ -37,7 +43,8 @@ public class Person {
    // private List<Car> cars;
 
     //case d
-    @OneToMany(mappedBy = "owner")
+    @JsonBackReference
+    @OneToMany(mappedBy = "owner" )
     private List<Car> cars;
 
 

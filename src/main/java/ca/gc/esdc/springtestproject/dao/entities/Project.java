@@ -14,8 +14,8 @@ import java.util.List;
 //@Table(name = "t_project")
 public class Project {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int pId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long pId;
     private String title;
     private Double budget;
 
